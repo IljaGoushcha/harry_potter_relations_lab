@@ -1,0 +1,11 @@
+<h1>Enter new House:</h1>
+
+<%= form_for @house do |f| %>
+  <%= f.label :house_name %>
+  <%= f.text_field :house_name %>
+  <%= f.hidden_field :school_id, value: @school_id %>
+
+  <br><%= f.submit "Add House" %>
+<% end %>
+
+<%= link_to "Back to Home Page", schools_path %>

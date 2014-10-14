@@ -1,0 +1,8 @@
+<h3> <%= @house.house_name %></h3>
+<ul>
+  <% @house_students.each do |house_student| %>
+  <li> <%= house_student.student_name %>,  <%= house_student.age %> </li>
+  <% end %>
+</ul>
+<%= link_to "All Houses", schools_path %>
+

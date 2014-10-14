@@ -1,0 +1,15 @@
+<% @schools.each do |school| %>
+  <h1> <%= school.school_name %> </h1>
+  <% school_houses = @houses.where(school_id: school.id) %>
+  <ul>
+    <% school_houses.each do |school_house| %>
+      <li> <%= link_to school_house[:house_name], house_path(school_house) %> </li>
+    <% end %>
+  </ul>
+  <%= link_to 'Add New House', new_house_path(school) %>
+  <%= link_to 'Delete House', school %>
+<% end %>
+
+
+
+
